@@ -4,11 +4,13 @@
   "description": "A mixin to provide soft deletes by adding a deletedAt attribute for loopback Models",
   "main": "src/index.js",
   "scripts": {
-    "outdated": "npm outdated --depth=0",
-    "pretest": "eslint ./src/*.js && gulp babel",
     "preversion": "npm test",
+    "compile": "gulp babel",
+    "prepublish": "npm run compile",
+    "pretest": "eslint ./src/*.js && gulp babel",
     "test": "_mocha --compilers js:babel-core/register",
-    "watch": "gulp"
+    "watch": "gulp",
+    "outdated": "npm outdated --depth=0"
   },
   "author": {
     "name": "Aleksander Shereminskiy"
@@ -52,7 +54,6 @@
   "peerDependencies": {
     "loopback-datasource-juggler": ">=2.33.2"
   },
-  "readme": "ERROR: No README data found!",
   "repository": {
     "type": "git",
     "url": "https://github.com/Shereminskiy/loopback-soft-delete-mixin"
