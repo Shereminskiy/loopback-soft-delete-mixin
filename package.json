@@ -1,6 +1,6 @@
 {
   "name": "loopback-soft-delete-mixin",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "A mixin to provide soft deletes by adding a deletedAt attribute for loopback Models",
   "main": "src/index.js",
   "scripts": {

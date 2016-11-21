@@ -1,15 +1,15 @@
 SoftDelete
 =============
 
-This module is designed for the [Strongloop Loopback](https://github.com/strongloop/loopback) framework. It allows entities of any Model to be "soft deleted" by adding `deletedAt` and `_isDeleted` attributes. Queries following the standard format will no return these entities; they can only be accessed by adding `{ deleted: true }` to the query object (at the same level as `where`, `include` etc).
+This module is designed for the [Strongloop Loopback](https://github.com/strongloop/loopback) framework. It allows entities of any Model to be "soft deleted" by adding a `deletedAt` attribute. Queries following the standard format will not return these entities; they can only be accessed by adding `{ deleted: true }` to the query object (at the same level as `where`, `include` etc).
 
-It is heavily inspired by [loopback-ds-timestamp-mixin](https://github.com/clarkbw/loopback-ds-timestamp-mixin).
+This is a fork from [loopback-softdelete-mixin](https://github.com/gausie/loopback-softdelete-mixin). The only real difference is that this module does not use the _isDeleted property on a model.
 
 Install
 -------
 
 ```bash
-  npm install --save loopback-softdelete-mixin
+  npm install --save loopback-soft-delete-mixin
 ```
 
 Configure
